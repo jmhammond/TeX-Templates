@@ -1,0 +1,93 @@
+\documentclass{article}
+
+
+% ========================================================================
+% preamble 
+% ========================================================================
+
+% margins, size, formatting
+\oddsidemargin=.25in
+\evensidemargin=.25in
+\topmargin=-.5in
+\textwidth=6in
+\textheight=9in
+\pagestyle{empty}
+
+\def\Z{{\mathbb{Z}}}  % shortcuts
+\def\R{{\mathbb{R}}}
+\def\C{{\mathbb{C}}}
+\def\Im{\mbox{Im }}
+\def\Re{\mbox{Re }}
+\def\ds {\displaystyle}
+\def\and {\mbox{ and }}
+
+ \newcommand{\pd}[2]{\frac{\partial #1}{\partial #2}}
+
+% packages for fancy fonts, symbols, thm/proof environments, etc
+\usepackage{amsmath,amssymb,amsthm}
+
+% laura's special format for HW problems
+\newsavebox{\probinput}
+\newenvironment{problem}[1]%
+  {\vspace{\baselineskip}%
+   \ifnum #1>9 \else \hspace{.78ex} \fi {\large \bf#1.$\;$}%
+   \begin{lrbox}{\probinput}%
+   \begin{minipage}[t]{.9175\textwidth}}%
+  {\end{minipage}%
+   \end{lrbox}%
+   \usebox{\probinput}}
+\newsavebox{\subinput}
+\newenvironment{subprob}[1]%
+  {\vspace{.5\baselineskip}%
+   {\bf #1)$\;$}%
+   \begin{lrbox}{\subinput}%
+   \begin{minipage}[t]{.965\textwidth}}%
+  {\end{minipage}%
+   \end{lrbox}%
+   \usebox{\subinput}}
+
+
+% ========================================================================
+% body 
+% ========================================================================
+
+\begin{document}
+
+% header =================================================================
+{\large \bf 7940 Homework 1.1-1.6 \hfill John Hammond}
+\vspace{\baselineskip}
+
+% problem ================================================================
+\begin{problem}{1} 
+Prove something about $f : \Omega \to \C$ being analytic.
+
+\emph{Proof.}  This is my proof.  
+
+It has something to do with partial derivatives $\pd{f}{x}$
+
+\qed
+\end {problem}
+
+\begin{problem}{15}
+Let $a, b \in \C$ with $a \not=0$, and let $T(z) = az + b, z \in \C$
+
+\begin{subprob}{(i}
+Show that $T$ maps the circle $C(z_0, r) $ onto the circle $C(T(z_0), r|a|)$.
+\end{subprob}
+\begin{subprob}{(ii}
+For which choices of $a$ and $b$ will $T$ map $C(0,1)$ onto $C(1 + i, 2)$?
+\end{subprob}
+\begin{subprob}{(iii}
+In (ii), is it possible to choose $a$ and $b$ so that $T(1) = -1 + 3i$?
+\end{subprob}
+\emph{Proof.}
+
+\qed
+\end{problem}
+
+
+
+
+
+
+\end{document} 
