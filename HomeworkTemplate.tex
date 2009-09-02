@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass[11pt]{article}
 
 
 % ========================================================================
@@ -21,10 +21,15 @@
 \def\ds {\displaystyle}
 \def\and {\mbox{ and }}
 
- \newcommand{\pd}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\pd}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\pdd}[2]{\frac{\partial^2 #1}{\partial #2 ^2}}
+\newcommand{\pddd}[2]{\frac{\partial^3 #1}{\partial #2 ^3}}
 
 % packages for fancy fonts, symbols, thm/proof environments, etc
 \usepackage{amsmath,amssymb,amsthm}
+
+
+\newtheorem{theorem}{Theorem}
 
 % laura's special format for HW problems
 \newsavebox{\probinput}
