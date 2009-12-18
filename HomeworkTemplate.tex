@@ -1,4 +1,4 @@
-\documentclass[11pt]{article}
+\documentclass[11pt,unboxed]{article}
 
 
 % ========================================================================
@@ -16,19 +16,47 @@
 \def\Z{{\mathbb{Z}}}  % shortcuts
 \def\R{{\mathbb{R}}}
 \def\C{{\mathbb{C}}}
+\def\N{{\mathbb{N}}}
+\def\Q{{\mathbb{Q}}}
 \def\Im{\mbox{Im }}
 \def\Re{\mbox{Re }}
 \def\ds {\displaystyle}
 \def\and {\mbox{ and }}
+\def\del {\partial}
+\def\Res {\mbox{Res}}
 
+\newcommand{\Om}{\Omega}
+\newcommand{\Si}{\Sigma}
+\newcommand{\si}{\sigma}
+\newcommand{\om}{\omega}
+\newcommand{\la}{\lambda}
+\newcommand{\La}{\Lambda}
+\newcommand{\al}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\ga}{\gamma}
+\newcommand{\Ga}{\Gamma}
+\newcommand{\De}{\Delta}
+\newcommand{\de}{\delta}
+\newcommand{\te}{\theta}
+\newcommand{\Te}{\Theta}
+\newcommand{\ze}{\zeta}
+\newcommand{\ka}{\kappa}
+\newcommand{\eps}{\varepsilon}
+
+\newcommand{\f}[2]{\frac{#1}{#2}}
 \newcommand{\pd}[2]{\frac{\partial #1}{\partial #2}}
 \newcommand{\pdd}[2]{\frac{\partial^2 #1}{\partial #2 ^2}}
 \newcommand{\pddd}[2]{\frac{\partial^3 #1}{\partial #2 ^3}}
 \newcommand{\powerseries}{\sum_{n=0}^\infty a_n (z-z_0)^n}
 \newcommand{\Powerseries}[2]{\sum_{n=0}^\infty #1 (#2)^n}
+%\newcommand{\l}{\left}
+%\newcommand{\r}{\right}
+
+\newcommand{\ul}{\underline}
+\newcommand{\ol}{\overline}
 
 % packages for fancy fonts, symbols, thm/proof environments, etc
-\usepackage{amsmath,amssymb,amsthm}
+\usepackage{amsmath,amssymb,amsthm,graphicx}
 
 
 \newtheorem{theorem}{Theorem}
@@ -44,7 +72,7 @@
    \end{lrbox}%
    \usebox{\probinput}}
 \newsavebox{\subinput}
-\newenvironment{subprob}[1]%
+\newenvironment{problem}[1]%
   {\vspace{.5\baselineskip}%
    {\bf #1)$\;$}%
    \begin{lrbox}{\subinput}%
@@ -65,7 +93,7 @@
 \vspace{\baselineskip}
 
 % problem ================================================================
-\begin{problem}{1} 
+1} 
 Prove something about $f : \Omega \to \C$ being analytic.
 
 \emph{Proof.}  This is my proof.   $\ds \powerseries$
@@ -75,18 +103,18 @@ It has something to do with partial derivatives $\pd{f}{x}$
 \qed
 \end {problem}
 
-\begin{problem}{15}
+15}
 Let $a, b \in \C$ with $a \not=0$, and let $T(z) = az + b, z \in \C$
 
-\begin{subprob}{(i}
+(i}
 Show that $T$ maps the circle $C(z_0, r) $ onto the circle $C(T(z_0), r|a|)$.
-\end{subprob}
-\begin{subprob}{(ii}
+\end{problem}
+(ii}
 For which choices of $a$ and $b$ will $T$ map $C(0,1)$ onto $C(1 + i, 2)$?
-\end{subprob}
-\begin{subprob}{(iii}
+\end{problem}
+(iii}
 In (ii), is it possible to choose $a$ and $b$ so that $T(1) = -1 + 3i$?
-\end{subprob}
+\end{problem}
 \emph{Proof.}
 
 \qed
